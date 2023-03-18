@@ -209,6 +209,7 @@ img {
   border-style: none;
 }
 
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -2501,6 +2502,20 @@ textarea.form-control {
   font-size: 80%;
   color: #F85C70;
 }
+
+figure {
+    display: inline-block;
+    margin: 0px; /* adjust as needed */
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+}
+
+.indent { text-indent: 30px;!important }
+.indent1 { text-indent: 60px;!important }
 
 .invalid-tooltip {
   position: absolute;
