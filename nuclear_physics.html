@@ -49,13 +49,27 @@
             </div>
         </div>
     </nav>
-
-    <h1 class="mb-5"><span class="text-danger"></span>
+    <center>
+    <img src="assets/imgs/cern.jpeg" style="width:20%" id="img1"/><span id="txt"><FONT size="10pt" color="red">                   Nuclear Physics             </FONT></span><img src="assets/imgs/nucleus.jpeg" style="width:20%" id="img2"/>
+    </center>
+    
+    
+    
+<!--   <h1 class="mb-5"><span class="text-danger"></span>
         <FONT size="10pt" color="red"><CENTER>Nuclear Physics</CENTER></FONT>
         <FONT size="3pt" color="black"><CENTER><u>(in a tiny nutshell, believe me a really small one !)</u></CENTER></FONT>
     </h1>
-    <br>
-    <br>
+--> 
+<br>
+<br>
+    <h2 class="mb-5"><span class="text-danger"></span>
+        <p class="indent"><FONT size="6pt" color="red"><u>Table of Matter</u></FONT></p>
+    </h2>
+    <p class="indent"><a href="nuclear_physics.html#introduction"><FONT size="4pt" color="blue">1. Introduction</FONT> </a></p> 
+    <p class="indent"><a href="nuclear_physics.html#what"><FONT size="4pt" color="blue">2. What is Nuclear Physics ?</FONT></a></p> 
+    <p class="indent"><a href="nuclear_physics.html#code"><FONT size="4pt" color="blue">3. Simulation Code</FONT></a></p> 
+    </p> 
+    
     <div style="text-align: center;">
 
         <figure>
@@ -64,10 +78,21 @@
           </figure>
         
     </div>
-    <section class="section" id="What is Nuclear Physics ?">
+    <section class="section" id="introduction">
         <div class="container">
             <h2 class="mb-5"><span class="text-danger"></span>
-                <FONT color="red"><CENTER>What is Nuclear Physics ?</CENTER></FONT>
+                <FONT color="red"><CENTER><u>Introduction</u></CENTER></FONT>
+            </h2>
+            <p> <FONT size="4pt" color="black">
+            </FONT>
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="what">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger"></span>
+                <FONT color="red"><CENTER><u>What is Nuclear Physics ?</u></CENTER></FONT>
             </h2>
             <p> <FONT size="4pt" color="black">
                 Nuclear physics is the field of physics that studies atomic nuclei and their constituents and interactions, 
@@ -98,21 +123,42 @@
                     <li>Electron Capture</li>
                   </ol>
                 Furthemore, where are more interested in the 3 first types. 
-                <p class="indent"> <FONT size="4pt" color="black"> <B>Alpha decay </B> &alpha; : occurs when the nucleus ejects an alpha particle (helium nucleus).</FONT></p>
-                <p class="indent"> <FONT size="4pt" color="black"> <B>Beta decays </B>: occurs in two ways :
-                <p class="indent1">1- Beta-minus decay &beta;<sup>-</sup>, when the nucleus emits an electron and an antineutrino in a process that changes a neutron to a proton.</p>
-                <p class="indent1">   <FONT size="4pt" color="black">2- Beta-plus decay &beta;<sup>+</sup>, when the nucleus emits a positron and a neutrino in a process that changes a proton to a neutron, also known as positron emission.</p></FONT>
-                <p class="indent"> <FONT size="4pt" color="black"> <B>Gamma decay </B> &gamma; : when a radioactive nucleus first decays by the emission of an alpha or beta particle. 
+                <p class="indent"> <FONT size="4pt" color="black"> <B>1- Alpha decay </B> &alpha; : occurs when the nucleus ejects an alpha particle (helium nucleus).
+<br>            <center> <sup>A</sup><sub>Z</sub>x &rarr; <sup>A-4</sup><sub>Z-2</sub>Y + <sup>4</sup><sub>2</sub>He, </center>
+<br>            where <i>X</i> is the mother nucleide, <i>Y</i> the daughter nucleide and <i>He</i> the Helium nuclei.</FONT></p>
+                <p class="indent"> <FONT size="4pt" color="black"> <B>2- Beta decays </B> &beta; : occurs in two ways :
+                <p class="indent1">a- Beta-minus decay &beta;<sup>-</sup> : occurs when the nucleides contains more neutrons than protons, 
+                    the nucleus then emits an electron and an antineutrino in a process that changes a neutron to a proton, this should be summarize by this eqution
+<br>            <center>        <sup>1</sup><sub>0</sub>n &rarr; <sup>1</sup><sub>1</sub>p + <sup>0</sup><sub>-1</sub>e + <SPAN STYLE="text-decoration:overline">&nu;</SPAN>, </center>
+<br>                where <i>n</i> is a neutron, <i>p</i> a proton, <i><sup>0</sup><sub>-1</sub>e</i> an electron and <i><SPAN STYLE="text-decoration:overline">&nu;</SPAN></i> an antineutrino (this is another story for another article).</p>
+                <p class="indent1">   <FONT size="4pt" color="black">b- Beta-plus decay &beta;<sup>+</sup> : occurs when the nucleids contains more proton than neutrons.
+                    The nucleus emits a positron and a neutrino in a process that changes a proton to a neutron, also known as positron emission, the equation could be written as folow :
+<br>                <center>    <sup>1</sup><sub>1</sub>p &rarr; <sup>1</sup><sub>0</sub>n + <sup>0</sup><sub>+1</sub>e + &nu; ,</center>
+<br>            where <i><sup>0</sup><sub>+1</sub>e</i> is a positron and &nu; a neutrino.</p></FONT>.
+                <p class="indent"> <FONT size="4pt" color="black"> <B>3- Gamma decay </B> &gamma; : when a radioactive nucleus first decays by the emission of an alpha or beta particle. 
                     The daughter nucleus that results is usually left in an excited state and it can decay to a lower energy state by emitting a gamma ray photon.</FONT></p>                   
+                    Now give a look at the figure in the right  :
+<br>                    
                 </FONT>   
 <br>            <p style="float:right"><img src="assets/imgs/band_stability.svg" style="width:50%"/></p>
-                <p><FONT size="4pt" color="black"> Now give a look at the figure in the right  :
-<br>            This figure represent the Band of Stability or the "Valley", is it the area where stable, non-radioactive isotopes exist based on their ratio of neutrons to protons.
-                Add to this area, it give us the area where a specific decay type could occurs.       
+                <p><FONT size="4pt" color="black"> 
+<br>            This figure represent the Band of Stability or the "Valley", it is the area where stable, non-radioactive isotopes exist based on their ratio of neutrons to protons. 
+                To be more explicitly, stable isotopes and nucleids could be defined by the region where, in a nucleide, the number is neutrons <b>N</b> is approximatively equal to the 
+                number of protons <b>Z</b>, <b>i.e</b> N &approx; Z, represented by the bold line in the figure. 
+                The more the nucleides deviate from this line, the more it is instable. It shows also that the more the nucleide gets heavier, the more likely it is to be unstable.
+<br>            Add to this, it give us the area where a specific decay type could occurs.       
                 </p>
                 </FONT>
                 <div style="clear:both"></div>
-<br>                             
+<br>     </p>
+        </div>
+    </section>        
+    <section class="section" id="code">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger"></span>
+            <FONT color="red"><CENTER><u>Simulation Code</u></CENTER></FONT>
+            </h2>
+            <p> <FONT size="4pt" color="black">                 
 <br>            I wrote a python code for my high school students to present in a pedagogical way the radioactivity decay. You can
                 access the code in github             
                 <a href="https://www.github.com/zackariadaoudi/Radioactive_Decay">here</a>.
@@ -122,7 +168,7 @@
     
     <section class="section bg-custom-gray" id="portfolio1">
         <div class="container">
-            <h1 class="mb-30"><span class="text-danger">Other Data Analysis Projects</span></h1>
+            <h2 class="mb-30"><span class="text-danger">Other Articles</span></h2>
             <div class="portfolio">
 
     <div class="section contact" id="contact">
