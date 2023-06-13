@@ -11,52 +11,52 @@
     <!-- Bootstrap + JohnDoe main styles -->
 	<link rel="stylesheet" href="assets/css/johndoe.css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#resume" class="nav-link">Resume</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav brand">
-                        <div class="brand-subtitle"> Zakaria Daoudi
-                            <br> Physicist | Data Analyst | Technical and Scientific Writing</div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item last-item">
-                        <a href="index.html#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link">Resume</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav brand">
+                <li class="text-center">
+                    <h5 class="brand-title"><FONT color="blue"> Zakaria Daoudi </FONT></h5>
+                    <div class="brand-subtitle"><FONT color="blue"> Theoretical Physicist | Data Analyst | Technical and Scientific Writing </FONT></div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item last-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     <center>
-        <span id="txt"><FONT size="10pt" color="blue">       Cathodic Protection Simulation Tool           </FONT></span>
+        <span id="txt"><FONT size="10pt" color="green">       Cathodic Protection Simulation Tool           </FONT></span>
         </center>
     <br>
     <br>
     <section class="section" id="Introduction">
         <div class="container">
             <h3 class="mb-5"><span class="text-danger"></span>Introduction</h3>
-            <p> <FONT size="4pt" color="black">
+            <p> <FONT size="3.5pt" color="black">
                 The task was to build the mathematics needed to simulate a pipeline with and without cathodic protection. <br>
                 Cathodic protection is one of the most effective methods for preventing corrosion on a metal surface. 
                 Cathodic protection is commonly used to protect numerous structures against corrosion, such as ships, 
@@ -89,7 +89,7 @@
     <section class="section" id="Basic">
         <div class="container">
             <h3 class="mb-5"><span class="text-danger"></span>Basic Mathematics</h3>
-            <p> <FONT size="4pt" color="#282828">
+            <p> <FONT size="3.5pt" color="#282828">
                 We start by discretize the current density on the pipeline created by one AC-DC rectifier : <br>  
                 <script type="text/javascript"
                 src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -109,6 +109,13 @@
                 one cell. More details about the calculations are provided in <a href="assets/files/basic_maths_ICCP.pdf">
                 this</a> pdf file.
                 <br>
+                <br>
+                A straightforward generalization leads to an equation for n rectifiers 
+                <div>
+                    <CENTER>$$J =\sum^{M}_{1} { I_{M} \over A_{1} \times (|p_{M}-n|+1)}$$</CENTER>
+                </div>
+                where \(I_{M}\) and \(p_{M}\) are the current produced by the rectifier M and its position respectively, n is the 
+                position where we are computing the current density on the pipeline.
             </FONT>
             </p>
             
