@@ -49,13 +49,13 @@
         </div>
     </nav>
     <center>
-        <span id="txt"><FONT size="10pt" color="red">       Cathodic Protection Simulation Tool           </FONT></span>
+        <span id="txt"><FONT size="10pt" color="blue">       Cathodic Protection Simulation Tool           </FONT></span>
         </center>
     <br>
     <br>
-    <section class="section" id="Description">
+    <section class="section" id="Introduction">
         <div class="container">
-            <h3 class="mb-5"><span class="text-danger"></span>Description</h3>
+            <h3 class="mb-5"><span class="text-danger"></span>Introduction</h3>
             <p> <FONT size="4pt" color="black">
                 The task was to build the mathematics needed to simulate a pipeline with and without cathodic protection. <br>
                 Cathodic protection is one of the most effective methods for preventing corrosion on a metal surface. 
@@ -77,14 +77,43 @@
                 </div>
                 <br>
                 The next step is to discretize the current density and the electric field on 
-                the new lattice created. 
+                the new lattice created. The challenge in this task is to adapt the mathematical model 
+                of the ICCP to this lattice.
                 <br>
-                The challenge in this task is to adapt the mathematical model of the ICCP to this lattice.
+                
             </FONT>
             </p>
             
         </div>
-    </section>    
+    </section>   
+    <section class="section" id="Basic">
+        <div class="container">
+            <h3 class="mb-5"><span class="text-danger"></span>Basic Mathematics</h3>
+            <p> <FONT size="4pt" color="#282828">
+                We start by discretize the current density on the pipeline created by one AC-DC rectifier : <br>  
+                <script type="text/javascript"
+                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <div>
+                    <CENTER>$$J = {I \over A}$$</CENTER>
+                </div>    
+                where J is the current density, I the current density from the rectifier and A the surface of the pipeline
+                in one cell. So the first question that came to our mind, is that if the rectifier is in position 1, i.e cell 1,
+                then what is the current density in cell 2 ? Cell 3 ? And so on. A basic formula is calculated for a current density 
+                in a cell N,
+                <div>
+                    <CENTER>$$J = {I \over A_{n}}$$</CENTER>
+                </div>
+                here \(A_{n}\) is the surface of of the pipeline at a cell n from the rectifier, which is written 
+                \(A_{n} = n \times A_{1}\), and \(A_{1} = 27.18 m^2\), the surface of the pipeline contained in
+                one cell. More details about the calculations are provided in <a href="assets/files/basic_maths_ICCP.pdf">
+                this</a> pdf file.
+                <br>
+            </FONT>
+            </p>
+            
+        </div>
+    </section>  
     
     <section class="section bg-custom-gray" id="portfolio1">
         <div class="container">
