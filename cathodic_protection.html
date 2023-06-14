@@ -79,7 +79,8 @@
                 The next step is to discretize the current density and the electric field on 
                 the new lattice created. The challenge in this task is to adapt the mathematical model 
                 of the ICCP to this lattice.
-                
+                The Simulation Tool is hosted on <a href="https://github.com/atmosphericiq/iecm_simulator.git" target="_blank">Github</a> and the 
+                front-end app can be accessed via this <a href="http://sim.iecm.org/" target="_blank">link</a>.                
             </FONT>
             </p>
             
@@ -125,12 +126,31 @@
                 where S and A are the current sources and B the current sink, see fig. 2 for more details. The details of the 
                 calculations are given in <a href="assets/files/E-field.pdf" target="_blank">
                 this</a> pdf file.
+                <br>
                 <div style="text-align: center;">
                   <figure>
                     <img src="assets/imgs/e-field.png" style="width:100%">
                     <figcaption><CENTER>Fig.1 : The Electric Field created by S, A and B at point P. </CENTER></figcaption>
                   </figure>
                 </div>  
+                The Electric Fields created by S, A and B are given by :
+                <br>
+                <br>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current source S :</FONT></p>
+                    <CENTER>$$E_{S_{x}}=E_{S}\cos\alpha$$</CENTER>
+                    <CENTER>$$E_{S_{y}}=E_{S}\sin\alpha$$</CENTER>
+                </div>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current source A :</FONT></p>
+                    <CENTER>$$E_{A_{x}}=E_{A}\sin\gamma$$</CENTER>
+                    <CENTER>$$E_{A_{y}}=E_{A}\cos\gamma$$</CENTER>
+                </div>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current sink B :</FONT></p>
+                    <CENTER>$$E_{B_{x}}=E_{B}\cos\beta$$</CENTER>
+                    <CENTER>$$E_{B_{y}}=E_{B}\sin\beta$$</CENTER>
+                </div>    
             </FONT>
             </p>
             
