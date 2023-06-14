@@ -79,7 +79,6 @@
                 The next step is to discretize the current density and the electric field on 
                 the new lattice created. The challenge in this task is to adapt the mathematical model 
                 of the ICCP to this lattice.
-                <br>
                 
             </FONT>
             </p>
@@ -112,10 +111,26 @@
                 <br>
                 A straightforward generalization leads to an equation for n rectifiers 
                 <div>
-                    <CENTER>$$J =\sum^{M}_{1} { I_{M} \over A_{1} \times (|p_{M}-n|+1)}$$</CENTER>
+                    <CENTER>$$J_{M} =\sum^{M}_{1} { I_{M} \over A_{1} \times (|p_{M}-n|+1)}$$</CENTER>
                 </div>
                 where \(I_{M}\) and \(p_{M}\) are the current produced by the rectifier M and its position respectively, n is the 
                 position where we are computing the current density on the pipeline.
+                <br> 
+                An optional step but could be used if there is an AC current which is to discretize the Electric Field. The electric 
+                field in two dimensions at a point P is given by 
+                <div>
+                    <CENTER>$$E_{T_{x}}=E_{S_{x}}+E_{A_{x}}+E_{B_{x}}$$</CENTER>
+                    <CENTER>$$E_{T_{y}}=E_{S_{y}}+E_{A_{y}}+E_{B_{y}}$$</CENTER>
+                </div>
+                where S and A are the current sources and B the current sink, see fig. 2 for more details. The details of the 
+                calculations are given in <a href="assets/files/E-field.pdf" target="_blank">
+                this</a> pdf file.
+                <div style="text-align: center;">
+                  <figure>
+                    <img src="assets/imgs/e-field.png" style="width:100%">
+                    <figcaption><CENTER>Fig.1 : The Electric Field created by S, A and B at point P. </CENTER></figcaption>
+                  </figure>
+                </div>  
             </FONT>
             </p>
             
