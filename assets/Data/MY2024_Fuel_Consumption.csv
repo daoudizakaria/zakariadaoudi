@@ -1,4 +1,4 @@
-Model year,Make,Model,Vehicle_class,Engine_size₍L),Cylinders,Transmission,Fuel_type,City₍L/100 km),Highway₍L/100 km),Combined₍L/100 km),Combined₍mpg),CO2_emissions₍g/km),CO2_rating,Smog_rating
+Model_year,Make,Model,Vehicle_class,Engine_size(L),Cylinders,Transmission,Fuel_type,City₍L/100 km),Highway₍L/100 km),Combined₍L/100 km),Combined₍mpg),CO2_emissions₍g/km),CO2_rating,Smog_rating
 2024,Acura,Integra A-SPEC,Full-size,1.5,4,AV7,Z,8.1,6.5,7.4,38,172,6,7
 2024,Acura,Integra A-SPEC,Full-size,1.5,4,M6,Z,8.9,6.5,7.8,36,181,6,6
 2024,Acura,Integra Type S,Full-size,2.0,4,M6,Z,11.1,8.3,9.9,29,230,5,6
