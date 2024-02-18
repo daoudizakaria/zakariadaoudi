@@ -103,7 +103,21 @@ and provides a straightforward approach for making informed decisions based on d
     <section class="section" id="Maths">
         <div class="container">
             <h3 class="mb-5"><span class="text-danger"></span>Mathematical Foundation</h3>
-            
+        Let's assume we have a collection of labeled points 
+        \({(x_i,y_i)}^{N}_{i=1}\), where N is the size of the
+        collextion, \(x_i\) is the D-dimensional feature vector of example 
+     \(i=1,...,N\), \(y_i\) is a real-valed targed and every 
+     feature \(x^{j}_i=1,...,D\), is also a real number. 
+        </br> Let's call the function \(f_{w,b}\) the <b>model</b>. The precedent notation of the function \(f\)
+        means that our model is parametrized by two values: \(w\) and \(b\), it can be defined as a linear combination as follow 
+        <div>
+            <CENTER>$$ f_{w,b}(x)=w x + b $$</CENTER>
+        </div>
+        where \(w\) is a D-dimensional vector of parameters and b is 
+        a real number. One can ask:"How is this relevant?", this is precisely the model used 
+        to predict the unkown \(y\) for a given x. Since there is a huge number of different pairs 
+         (<b>\(w\)</b>, \(b\)), we have to find the optimale values (<b>\(w^{*}\)</b>, \(b^{*}\)), where the optimal values 
+        of the parameters define the model that makes the most accurate predictions. 
     </section>    
     
     <section class="section bg-custom-gray" id="portfolio1">
