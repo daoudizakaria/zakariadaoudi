@@ -61,6 +61,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
 body {
   margin: 0;
   font-family: "Leto", sans-serif;
