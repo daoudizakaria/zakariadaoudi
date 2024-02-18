@@ -118,6 +118,19 @@ and provides a straightforward approach for making informed decisions based on d
         to predict the unkown \(y\) for a given x. Since there is a huge number of different pairs 
          (<b>\(w\)</b>, \(b\)), we have to find the optimale values (<b>\(w^{*}\)</b>, \(b^{*}\)), where the optimal values 
         of the parameters define the model that makes the most accurate predictions. 
+        <section class="section" id="Maths">
+            <div class="container">
+                <h5 class="mb-3"><span class="text-danger"></span>Solution and Cost Function</h5>
+        In order to find the optimal values for \(w^{*}\) and \(b^{*}\), we tries to minimize the
+        following expression 
+        <div>
+            <CENTER>$$ \frac{1}{N}\sum_{i=1,...,N}(f_{w,b}(x_i)-y_i)^2 $$</CENTER>
+        </div>
+        The term \((f_{w,b}(x_i)-y_i)^2\) is called the <b>loss function</b> or <b>cost function</b>.
+        That function is a choice of measurement of the model accuracy called <b>squared error loss</b>. The cost function is something 
+        general to all machine learning algorithms, and the principle is the same
+        <CENTER><i><b><FONT size="4pt" color="red">The less the cost function is, the best is the model.</FONT></b></i></CENTER>
+        </section> 
     </section>    
     
     <section class="section bg-custom-gray" id="portfolio1">
