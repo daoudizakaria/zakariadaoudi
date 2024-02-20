@@ -70,6 +70,10 @@ p {
   text-justify: inter-word;
 }
 
+p1 {
+  text-align: center;
+}
+
 
 body {
   margin: 0;
@@ -513,16 +517,21 @@ mark,
 
 .figure {
   display: inline-block;
+  border: 1px dotted gray;
+  margin: 20px; /* adjust as needed */
 }
 
 .figure-img {
   margin-bottom: 0.5rem;
   line-height: 1;
+  vertical-align: top
 }
 
 .figure-caption {
   font-size: 90%;
   color: #6c757d;
+  border: 1px dotted blue;
+  text-align: center;
 }
 
 code {
@@ -11625,7 +11634,7 @@ pre .code {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .section.bg-custom-gray {
