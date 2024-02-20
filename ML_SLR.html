@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with JohnDoe landing page.">
     <meta name="author" content="Devcrud">
-    <title>Zakaria Daoudi | Simple Linear Regression </title>
+    <title>Zakaria Daoudi | Linear Regression </title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
@@ -68,8 +68,7 @@
         </div>
     <section class="section" id="Description">
         <div class="container">
-            <h3 class="mb-5"><span class="text-danger"></span>Introduction</h3>
-            <center></center>
+            <h3 class="mb-3"><span class="text-danger"></span>Introduction</h3>
             Simple Linear Regression (SLR) is a foundational statistical technique used to explore the relationship between two continuous variables: a predictor (or independent) variable and a response (or dependent) variable. At its core, SLR aims to establish a linear connection between these two variables through a straight line, which best captures the underlying pattern of the data points.
 
         </br>The fundamental equation for a Simple Linear Regression model is:
@@ -86,35 +85,39 @@ Here, \(f_{w,b}\) signifies the response variable we are attempting to predict o
 indicating the change in \(f_{w,b}\) for a unit change in \(x\); and (\epsilon\) denotes the error term, 
 capturing the variation in \(f_{w,b}\) that cannot be explained by the linear relationship with \(X\).
 
-</br>Simple Linear Regression functions under two primary assumptions: that there is a linear 
+</br>Linear Regression functions under two primary assumptions: that there is a linear 
 relationship between the input and output variables, and that the residuals 
 (the differences between observed and predicted values) follow a normal distribution.
 
-</br>SLR is a powerful tool not only for predictive analysis but also for providing insights into 
+</br>This algorithm is a powerful tool not only for predictive analysis but also for providing insights into 
 the strength and nature of the association between the variables. 
 For instance, if after analyzing data on advertising spend and sales performance, 
 a company discovers a high positive slope, it can infer that higher advert spends usually 
 correlate with increased sales. In the world of data science and analytics, 
 SLR serves as an essential building block for understanding more complex modeling techniques 
 and provides a straightforward approach for making informed decisions based on data.
-        </center>
         </div>
     </section>
     <section class="section" id="Maths">
         <div class="container">
-            <h3 class="mb-5"><span class="text-danger"></span>Mathematical Foundation</h3>
+            <h3 class="mb-3"><span class="text-danger"></span>Mathematical Foundation</h3>
         Let's assume we have a collection of labeled points 
         \({(x_i,y_i)}^{N}_{i=1}\), where N is the size of the
         collextion, \(x_i\) is the D-dimensional feature vector of example 
      \(i=1,...,N\), \(y_i\) is a real-valed targed and every 
      feature \(x^{j}_i=1,...,D\), is also a real number. 
         </br> Let's call the function \(f_{w,b}\) the <b>model</b>. The precedent notation of the function \(f\)
-        means that our model is parametrized by two values: \(w\) and \(b\), it can be defined as a linear combination as follow 
+        means that our model is parametrized by two values: \(w\) and \(b\), also called <b>weights</b> it can be defined as a linear combination as follow 
         <div>
             <CENTER>$$ f_{w,b}(x)=w x + b $$</CENTER>
         </div>
         where \(w\) is a D-dimensional vector of parameters and b is 
-        a real number. One can ask:"How is this relevant?", this is precisely the model used 
+        a real number. An even more simplified and compact notation can be used if we set \(x_0=1\), \(\theta_0=b\), and 
+        \(\theta_1=w\)
+        <div>
+            <CENTER>$$ f_{\theta}(x)=\sum_{i=0}^{D} \theta_i x_i = \theta^T x, $$</CENTER>
+        </div>
+        One can ask:"How is this relevant?", this is precisely the model used 
         to predict the unkown \(y\) for a given x. Since there is a huge number of different pairs 
          (<b>\(w\)</b>, \(b\)), we have to find the optimale values (<b>\(w^{*}\)</b>, \(b^{*}\)), where the optimal values 
         of the parameters define the model that makes the most accurate predictions. 
@@ -129,8 +132,17 @@ and provides a straightforward approach for making informed decisions based on d
         The term \((f_{w,b}(x_i)-y_i)^2\) is called the <b>loss function</b> or <b>cost function</b>.
         That function is a choice of measurement of the model accuracy called <b>squared error loss</b>. The cost function is something 
         general to all machine learning algorithms, and the principle is the same
-        <CENTER><i><b><FONT size="4pt" color="red">The less the cost function is, the best is the model.</FONT></b></i></CENTER>
-        </section> 
+        <CENTER><i><b><FONT size="4pt" color="red">The less the cost function is, the best the model is.</FONT></b></i></CENTER>
+        In linear regression, the cost function is given by an average, the <b>average loss</b>, it's basically the average of all penalties
+        obtained by apllying the model to the training data. One of the advantages of the linear models and its simplicity 
+        beside the fact that <b>it works</b>, is that it rarely overfit. By <b>overfitting</b>, we mean that the model predicts very well labels 
+        of the examples used during training but frequently makes errors when applied to the test set. To answer a not asked question,
+        The absolute value is not convinient for gauging the quality of the model, because it doesn't have a continuous derivative, hence the function produced 
+        is not smooth, therefore, employing linear algebra to find closed form solutions to optimization problems is not easy and can be extremely exchausting. For this reason we use 
+        the squaring error before summing, thanks to a wonderful French mathematician from the 18th century called Adrien-Marie Legendre. 
+        Closed form solutions to finding an optimum of a function are simple algebraic expressions and are often preferabke to using complex numerical optimization
+        methods such as <b>gradient descent</b>.
+    </section> 
     </section>    
     
     <section class="section bg-custom-gray" id="portfolio1">
@@ -207,6 +219,5 @@ and provides a straightforward approach for making informed decisions based on d
 
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
-
 </body>
 </html>
