@@ -80,7 +80,7 @@
             <p class="indent"><a href="ML_SLR.html#Description"><FONT size="4pt" color="blue">1. Introduction</FONT> </a></p> 
             <p class="indent"><a href="ML_SLR.html#Maths"><FONT size="4pt" color="blue">2. Mathematical Foundations</FONT></a></p>
             <p class="indent"><a href="ML_SLR.html#Maths-1"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 Solution and Cost Function</FONT></a></p>
-            <p class="indent"><a href="ML_SLR.html#Maths-2"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 Gradient Descent</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#Maths-2"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 Gradient Descent Algorithm</FONT></a></p> 
             <p class="indent"><a href="ML_SLR.html#"><FONT size="4pt" color="blue">3. Python</FONT></a></p> 
             <p class="indent"><a href="ML_SLR.html#"><FONT size="4pt" color="blue">4. Real-World Application</FONT></a></p> 
 </center>
@@ -164,7 +164,12 @@ and provides a straightforward approach for making informed decisions based on d
         </section> 
     </br>
         <section class="subsection" id="Maths-2">
-            <h5 class="mb-3"><span class="text-danger"></span>Gradient Descent</h5>
+            <h5 class="mb-3"><span class="text-danger"></span>Gradient Descent Algorithm</h5>
+            We start with an initial \(\theta\) value, and we constantly performs the operations
+            <div>
+                <CENTER>$$ \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} f_{\theta} $$</CENTER>
+            </div>
+            where \(\alpha\) is the <b>learning rate</b>. 
         </section> 
      </div>
     </section>    
