@@ -1079,3 +1079,11 @@
 .ti-rss-alt:before {
 	content: "\e75f";
 }
+
+.ti-brain:before {
+	content: "\1F9E0"
+}
+
+.ti-atom:before {
+	content: "\269B"
+}
