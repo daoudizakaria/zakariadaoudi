@@ -11198,11 +11198,11 @@ p {
 }
 
 .portfolio .filters {
-  border-bottom: 6px solid #dee2e6;
+  border-bottom: 10px solid #dee2e6;
   border-radius: 0;
   padding-bottom: 10px;
   margin: 0 auto 40px;
-  max-width: 400px;
+  max-width: 1000px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11219,10 +11219,10 @@ p {
           flex-basis: 0;
   display: block;
   color: #212529;
-  font-size: 13px;
-  font-weight: 500;
-  opacity: .7;
-  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 900;
+  opacity: .9;
+  padding: 15px 50px;
   transition: 0.3s;
   -webkit-transition: 0.3s;
 }
@@ -11258,8 +11258,8 @@ p {
 
 .portfolio .portfolio-container .portfolio-item .content-holder {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 70%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -11639,7 +11639,7 @@ pre .code {
 }
 
 .section.bg-custom-gray {
-  background: rgba(242, 244, 247, 0.15);
+  background: rgba(255, 244, 247, 0.15);
 }
 
 .about-section {
