@@ -11539,8 +11539,8 @@ pre .code {
 
 .header {
   position: relative;
-  height: 35vh;
-  min-height: 450px;
+  height: 30vh;
+  min-height: 400px;
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), url(../imgs/3.jpeg);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imgs/3.jpeg);
   background-size: cover;
