@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Zakaria Daoudi - Professional Theoretical Physicist">
+    <meta name="author" content="Zakaria Daoudi">
+    <title>Zakaria Daoudi | Nuclear Physics</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+    <link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- MathJax for equations -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <style>
+      /* Base styling */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        background-color: #f8f9fa; /* Very light gray */
+        color: #2c3e50;          /* Dark blue-gray text */
+        padding-bottom: 40px;
+      }
+      h1, h2, h3 {
+        font-family: Georgia, serif;
+        margin-top: 0;
+      }
+      a {
+        color: #2980b9;  /* Crisp blue for links */
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Navigation: Flex layout with centered brand */
+      nav.navbar {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      .container.d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav.brand {
+        margin: 0 auto;
+      }
+      .brand-title {
+        margin-bottom: 0;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .brand-subtitle {
+        font-size: 0.85em;
+        color: #7f8c8d;
+      }
+      /* Fixed Sidebar TOC */
+      .sidebar-toc {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 240px;
+        background: #ffffff;
+        border-right: 1px solid #bdc3c7;
+        padding: 20px;
+        height: calc(100% - 100px);
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+      }
+      .sidebar-toc h2 {
+        font-size: 1.5em;
+        color: #2980b9;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .sidebar-toc ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar-toc li {
+        margin: 10px 0;
+      }
+      .sidebar-toc li a {
+        font-size: 1em;
+        color: #2980b9;
+      }
+      /* Main Content Area */
+      .main-content {
+        margin-left: 260px;
+        padding: 20px 40px;
+        background: #ffffff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .section h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .section h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      .section p {
+        margin: 1em 0;
+        text-align: justify;
+      }
+      /* Equations: Wrap each equation with <CENTER>$$ ... \quad (n)$$</CENTER> */
+      @media (max-width: 768px) {
+        .sidebar-toc {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #bdc3c7;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#resume" class="nav-link">Resume</a></li>
+          </ul>
+        </div>
+        <div class="navbar-nav brand mx-auto">
+          <li class="brand-txt">
+            <h5 class="brand-title mb-0">Zakaria Daoudi</h5>
+            <div class="brand-subtitle">Theoretical Physicist | Data Analyst | Technical and Scientific Writing</div>
+          </li>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="index.html#blog" class="nav-link">Blog</a></li>
+          <li class="nav-item last-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Header with images and centered title -->
+    <center>
+      <img src="assets/imgs/nuclear_lab.jpg" id="img1" style="width:20%; margin-right:10px;">
+      <span id="header-title"><font size="10pt" color="#2980b9"><u>Nuclear Physics</u></font></span>
+      <img src="assets/imgs/nucleus.jpg" id="img2" style="width:20%; margin-left:10px;">
+    </center>
+    <br><br>
+    
+    <!-- Fixed Sidebar Table of Contents -->
+    <div class="sidebar-toc">
+      <h2>Table of Matter</h2>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#what">2. What is Nuclear Physics?</a></li>
+        <li><a href="#decay">3. Radioactive Decay</a></li>
+        <li><a href="#simulation">4. Simulation Code</a></li>
+        <li><a href="#conclusion">5. Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- 1. Introduction -->
+      <section class="section" id="introduction">
+        <h2><u>Introduction</u></h2>
+        <p>
+          </br>Imagine for a moment peering inside the dense heart of an atom, where an incredible force binds protons 
+          and neutrons together to form the nucleus—an entity so compact and powerful that it serves as the sun to the 
+          electrons' surrounding planetary orbits. This is the domain of nuclear physics, a field that not only seeks 
+          to understand the minute components and immense energy within the atom's core but also how these forces give 
+          rise to the very fabric of our universe.
+        </p>
+        <p>
+          </br>As the lifeblood of stars and the primal fuel of power plants, nuclear processes shape the cosmos and our 
+          daily lives. Through nuclear physics, we unravel the mysteries of atomic energy, the power behind both the Sun's 
+          life-giving radiance and the destructive might of nuclear weapons. It's a tale of contrasts, where energy that 
+          can illuminate cities also holds the potential to devastate them.
+        </p>
+        <p>
+          </br>In this article, we step into the world of nuclear physics, breaking down complex concepts into approachable insights. 
+          We'll discuss the pioneers—like Marie Curie's groundbreaking work on radioactivity, Ernest Rutherford's unveiling of 
+          the nucleus, and Lise Meitner's co-discovery of nuclear fission—that laid the groundwork for technologies from medical 
+          imaging to energy generation.
+        </p>
+        <p>
+          </br>Yet, the story of nuclear physics isn't just one of scientific triumph and technological marvels. 
+          It's also a narrative of ethical conundrums and responsibility—a reminder of the weight that knowledge carries and 
+          the impact that science has on society.
+        </p>
+      </section>
+      
+      <!-- 2. What is Nuclear Physics? -->
+      <section class="section" id="what">
+        <h2><u>What is Nuclear Physics?</u></h2>
+        <p>
+          Nuclear physics is the study of the constituents and interactions of atomic nuclei. It explores not only the properties 
+          of protons and neutrons but also the forces that bind them together. This field underpins a wide range of applications, 
+          from energy generation and medical imaging to understanding stellar processes.
+        </p>
+        <p>
+          In an atom, the nucleus contains almost all the atomic mass while electrons occupy the surrounding space. Unstable nuclei 
+          undergo radioactive decay, releasing energy and transforming into different elements or isotopes.
+        </p>
+        <figure>
+          <img src="assets/imgs/decay_types.jpg" style="width:100%;">
+          <figcaption><center>Fig.2 : Radioactive decay modes.</center></figcaption>
+        </figure>
+        <p>
+          There are five primary types of radioactive decay:
+          <ol>
+            <li>Alpha decay</li>
+            <li>Beta decay</li>
+            <li>Gamma decay</li>
+            <li>Positron emission</li>
+            <li>Electron capture</li>
+          </ol>
+          In practice, we often focus on the first three.
+        </p>
+        <p class="indent">
+          <b>1- Alpha decay</b> &alpha; : occurs when the nucleus ejects an alpha particle (helium nucleus).  
+          <center> <sup>A</sup><sub>Z</sub>X &rarr; <sup>A-4</sup><sub>Z-2</sub>Y + <sup>4</sup><sub>2</sub>He &nbsp; (1)</center>
+          Here, <i>X</i> is the parent nucleus, <i>Y</i> the daughter nucleus, and <i>He</i> the emitted helium nucleus.
+        </p>
+        <p class="indent">
+          <b>2- Beta decays</b> &beta; : occurs in two forms:
+          <br>
+          a- Beta-minus decay &beta;<sup>-</sup>: a nucleus with excess neutrons emits an electron and an antineutrino, converting a neutron into a proton.  
+          <center> <sup>1</sup><sub>0</sub>n &rarr; <sup>1</sup><sub>1</sub>p + <sup>0</sup><sub>-1</sub>e + <span style="text-decoration:overline">&nu;</span> &nbsp; (2)</center>
+          <br>
+          b- Beta-plus decay &beta;<sup>+</sup>: a nucleus with excess protons emits a positron and a neutrino, converting a proton into a neutron.  
+          <center> <sup>1</sup><sub>1</sub>p &rarr; <sup>1</sup><sub>0</sub>n + <sup>0</sup><sub>+1</sub>e + &nu; &nbsp; (3)</center>
+        </p>
+        <p class="indent">
+          <b>3- Gamma decay</b> &gamma;: occurs when a nucleus in an excited state releases excess energy as gamma rays.
+        </p>
+        <p>
+          Additionally, the Band of Stability shows that isotopes with a balanced neutron-to-proton ratio are stable, whereas deviations lead to instability.
+        </p>
+        <figure style="text-align: center;">
+          <img src="assets/imgs/band_stability.svg" style="width:50%;">
+          <figcaption><center>Fig.3 : Band of Stability</center></figcaption>
+        </figure>
+      </section>
+      
+      <!-- 3. Simulation Code -->
+      <section class="section" id="simulation">
+        <h2><u>Simulation Code</u></h2>
+        <p>
+          I developed a Python code for my high school students to demonstrate the principles of radioactive decay in a pedagogical manner. The code numerically simulates decay processes, allowing students to visualize how decay trends evolve over time.
+        </p>
+        <p>
+          You can access the simulation code on GitHub:  
+          <a href="https://www.github.com/zackariadaoudi/Radioactive_Decay" target="_blank">Radioactive Decay Simulation</a>.
+        </p>
+      </section>
+      
+      <!-- 4. Conclusion -->
+      <section class="section" id="conclusion">
+        <h2><u>Conclusion</u></h2>
+        <p>
+          Nuclear physics remains a vital field of study with far-reaching implications in energy, medicine, and astrophysics. Ongoing research and advanced simulation techniques continue to deepen our understanding of the atomic nucleus and the forces that govern its behavior.
+        </p>
+      </section>
+      
+      <!-- References -->
+      <section class="section" id="references">
+        <h2><u>References</u></h2>
+        <ol>
+          <li>Krane, K. S. (1987). Introductory Nuclear Physics.</li>
+          <li>Heyde, K. (1994). Basic Ideas and Concepts in Nuclear Physics.</li>
+          <li>Bohr, A., &amp; Mottelson, B. R. (1969). Nuclear Structure, Vol. I.</li>
+          <li>Libby, T., &amp; Zachariasen, F. (1958). Nuclear Physics: Principles and Applications.</li>
+        </ol>
+      </section>
+    </div>
+    
+    <!-- Contact Section -->
+    <section class="section bg-custom-gray" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="contact-form-card">
+              <h4 class="contact-title">Send a message</h4>
+              <form action="mailto:zakaria.daoudi@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <input type="text" placeholder="Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Message *" rows="7" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-info-card">
+              <h4 class="contact-title">Get in touch</h4>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-mobile icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Phone :<br> <span class="text-muted">+ (213) 561-693-386</span></h6>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-envelope icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Email :<br> <span class="text-muted">zakaria.daoudi@google.com</span></h6>
+                </div>
+              </div>
+              <ul class="social-icons pt-4">
+                <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Core JS -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+    <script src="assets/js/johndoe.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
+  </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Zakaria Daoudi | Cosmological CDM Simulation</title>
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+    <link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- MathJax (same as nuclear_physics.html) -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <style>
+      /* Base styling */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        background-color: #ecf0f1; /* Light blue-gray background */
+        color: #2c3e50;
+        padding-bottom: 40px;
+      }
+      h1, h2, h3 {
+        font-family: Georgia, serif;
+        margin-top: 0;
+      }
+      a {
+        color: #2980b9;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Updated Navigation with Centered Brand */
+      nav.navbar {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+      .container.d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      /* Left and Right navigation groups */
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+      /* Center Brand styling */
+      .navbar-nav.brand {
+        margin: 0 auto;
+      }
+      .brand-title {
+        margin-bottom: 0;
+      }
+      /* Fixed Sidebar TOC */
+      .sidebar-toc {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 240px;
+        background: #ffffff;
+        border-right: 1px solid #bdc3c7;
+        padding: 20px;
+        height: calc(100% - 100px);
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+      }
+      .sidebar-toc h2 {
+        font-size: 1.5em;
+        color: #2980b9;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .sidebar-toc ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar-toc li {
+        margin: 10px 0;
+      }
+      .sidebar-toc li a {
+        font-size: 1em;
+        color: #2980b9;
+      }
+      /* Main Content Area */
+      .main-content {
+        margin-left: 260px;
+        padding: 20px 40px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .section h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .section h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      .section p {
+        margin: 1em 0;
+        text-align: justify;
+      }
+      /* Equations: Using the same format as nuclear_physics.html
+         Each equation is wrapped with <CENTER>$$ ... \quad (n)$$</CENTER> */
+      @media (max-width: 768px) {
+        .sidebar-toc {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #bdc3c7;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#resume" class="nav-link">Resume</a></li>
+          </ul>
+        </div>
+        <div class="navbar-nav brand mx-auto">
+          <li class="brand-txt">
+            <h5 class="brand-title mb-0">Zakaria Daoudi</h5>
+            <div class="brand-subtitle">Theoretical Physicist | Data Analyst | Technical and Scientific Writing</div>
+          </li>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="index.html#blog" class="nav-link">Blog</a></li>
+          <li class="nav-item last-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Header with images and centered title -->
+    <center>
+      <img src="assets/imgs/cdm_simulation.jpg" id="img1" style="width:20%; margin-right:10px;">
+      <span id="header-title"><font size="10pt" color="#2980b9"><u>Cosmological CDM Simulation</u></font></span>
+      <img src="assets/imgs/galaxy.jpg" id="img2" style="width:20%; margin-left:10px;">
+    </center>
+    <br><br>
+    
+    <!-- Fixed Sidebar Table of Contents -->
+    <div class="sidebar-toc">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#theoretical">2. Theoretical Framework</a></li>
+        <li><a href="#computational">3. Computational Methods</a></li>
+        <li><a href="#results">4. Results</a></li>
+        <li><a href="#conclusion">5. Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- 1. Introduction -->
+      <section class="section" id="introduction">
+        <h2><u>Introduction</u></h2>
+        <p>
+          Imagine peering into the dense heart of an atom—where an incredible force binds protons and neutrons to form a compact nucleus. In cosmological simulations, Cold Dark Matter (CDM) shapes the universe’s large-scale structure, even as challenges arise at galactic scales. This analysis offers a comprehensive look at CDM’s theoretical underpinnings, simulation techniques, outcomes, and the challenges that remain.
+        </p>
+      </section>
+      
+      <!-- 2. Theoretical Framework -->
+      <section class="section" id="theoretical">
+        <h2><u>Theoretical Framework</u></h2>
+        <h3>2.1 Fundamentals of Cold Dark Matter</h3>
+        <p>
+          CDM particles are non-relativistic and interact primarily via gravity. Their early decoupling from cosmic plasma enables the formation of gravitational wells that drive cosmic structure formation.
+        </p>
+        <h3>2.2 Navarro-Frenk-White (NFW) Profile</h3>
+        <p>
+          The density distribution of dark matter halos is modeled by the NFW profile:
+        </p>
+        <!-- Fixed the first equation by adding a closing curly brace for the denominator -->
+        <CENTER>$$\rho_{NFW}(r)=\frac{\rho_s}{\left(\frac{r}{r_s}\right)\left(1+\frac{r}{r_s}\right)^2} \quad (1)$$</CENTER>
+        <h3>2.3 Galaxy Dynamics and Rotation Curves</h3>
+        <p>
+          Dark matter’s gravitational pull is essential for the flat rotation curves observed in galaxies, as described by Poisson’s equation:
+        </p>
+        <CENTER>$$\nabla^2 \Phi=4\pi G\rho \quad (2)$$</CENTER>
+        <h3>2.4 Jeans Equations</h3>
+        <p>
+          The dynamics of galaxies are further analyzed using the Jeans equations:
+        </p>
+        <CENTER>$$\frac{1}{\nu}\frac{d}{dr}\left(\nu\bar{v}_r^2\right)+\frac{2\beta\bar{v}_r^2}{r}=-\frac{GM_{dyn}(r)}{r^2} \quad (3)$$</CENTER>
+        <h3>2.5 Observational Challenges</h3>
+        <p>
+          Although simulations predict cuspy dark matter cores, observations reveal flatter profiles. The Baryonic Tully-Fisher Relation—linking baryonic mass to rotation velocity—is expressed as:
+        </p>
+        <CENTER>$$M_{baryonic}=AV_c^4 \quad (4)$$</CENTER>
+      </section>
+      
+      <!-- 3. Computational Methods -->
+      <section class="section" id="computational">
+        <h2><u>Computational Methods</u></h2>
+        <h3>3.1 Hydrodynamical N-body Simulations</h3>
+        <p>
+          Simulations integrate gravitational and baryonic physics to model galaxy evolution. Techniques include Treecode algorithms (reducing computational complexity from O(N²) to O(N log N)) and Leapfrog integration for stable time-stepping:
+        </p>
+        <CENTER>$$v\Bigl(t+\frac{\Delta t}{2}\Bigr)=v(t)+\frac{\Delta t}{2}a(t) \quad (5)$$</CENTER>
+        <CENTER>$$x(t+\Delta t)=x(t)+\Delta tv\Bigl(t+\frac{\Delta t}{2}\Bigr) \quad (6)$$</CENTER>
+        <CENTER>$$v(t+\Delta t)=v\Bigl(t+\frac{\Delta t}{2}\Bigr)+\frac{\Delta t}{2}a(t+\Delta t) \quad (7)$$</CENTER>
+        <p>
+          Additional methods include Adaptive Mesh Refinement (AMR) and parallel computing techniques (OpenMP, MPI) to boost performance.
+        </p>
+        <h3>3.2 Visualization Techniques</h3>
+        <p>
+          Tools such as Matplotlib and ParaView are used to create density maps, analyze rotation curves, and visualize 3D galaxy interactions.
+        </p>
+      </section>
+      
+      <!-- 4. Results -->
+      <section class="section" id="results">
+        <h2><u>Results</u></h2>
+        <h3>4.1 Simulation Outcomes</h3>
+        <p>
+          The simulation outcomes validate CDM predictions by reproducing realistic galaxy rotation curves and halo structures consistent with observational data.
+        </p>
+        <h3>4.2 Analysis and Interpretation</h3>
+        <p>
+          Detailed analysis reveals correlations and discrepancies between theory and observation, guiding further refinements in simulation methodologies.
+        </p>
+      </section>
+      
+      <!-- 5. Conclusion -->
+      <section class="section" id="conclusion">
+        <h2><u>Conclusion</u></h2>
+        <p>
+          Cold Dark Matter remains a robust framework for explaining cosmic structure formation. However, challenges at galactic scales persist, necessitating ongoing improvements in computational models and observational techniques to reconcile theory with empirical evidence.
+        </p>
+      </section>
+      
+      <!-- References -->
+      <section class="section" id="references">
+        <h2><u>References</u></h2>
+        <ol>
+          <li>Navarro, J.F., et al. (1996)</li>
+          <li>Binney, J., & Tremaine, S. (2008)</li>
+          <li>McGaugh, S. (2020)</li>
+          <li>Bullock, J.S., & Boylan-Kolchin, M. (2017)</li>
+          <li>Begeman, K.G., et al. (1991)</li>
+          <li>Vogelsberger, M., et al. (2020)</li>
+          <li>Mo, H., van den Bosch, F., & White, S.D.M. (2010)</li>
+          <li>Salucci, P., et al. (2007)</li>
+          <li>Frenk, C.S., & White, S.D.M. (2012)</li>
+          <li>Garrison-Kimmel, S., et al. (2019)</li>
+        </ol>
+      </section>
+    </div>
+    
+    <!-- Contact Section -->
+    <section class="section bg-custom-gray" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="contact-form-card">
+              <h4 class="contact-title">Send a message</h4>
+              <form action="mailto:zakaria.daoudi@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <input type="text" placeholder="Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Message *" rows="7" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-info-card">
+              <h4 class="contact-title">Get in touch</h4>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-mobile icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Phone :<br> <span class="text-muted">+ (213) 561-693-386</span></h6>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-envelope icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Email :<br> <span class="text-muted">zakaria.daoudi@google.com</span></h6>
+                </div>
+              </div>
+              <ul class="social-icons pt-4">
+                <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Core JS -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+    <script src="assets/js/johndoe.js"></script>
+  </body>
+</html>
+
+
