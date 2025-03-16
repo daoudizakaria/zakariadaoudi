@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
+      </head>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Zakaria Daoudi | Linear Regression </title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <style>
+  .navbar-custom {
+    background: linear-gradient(45deg, #0B3D91, #1E88E5);
+    font-family: 'Open Sans', sans-serif; /* Ensure this font is loaded or change to your preferred font */
+  }
+  /* Increase spacing between nav items */
+  .navbar-custom .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  /* Adjust nav link font size, weight, and color */
+  .navbar-custom .nav-link {
+    color: #ffffff; /* Slightly off-white for improved readability */
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .nav-link:focus {
+    color: #ffffff; /* Bright white on hover */
+  }
+  .navbar-custom .navbar-toggler {
+    border-color: rgba(240, 240, 240, 240);
+  }
+  .navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240, 240, 240, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  .navbar-custom .brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .navbar-custom small {
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+</style>
+
+<!-- Navbar Markup -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom"
+     data-spy="affix" data-offset-top="510">
+  <div class="container">
+
+    <!-- Mobile Toggler Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarContent" aria-controls="navbarContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Nav Items -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Left Nav Items -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#resume" class="nav-link">Resume</a>
+        </li>
+      </ul>
+
+      <!-- Centered Brand (Always Visible) -->
+      <div class="mx-auto text-center">
+        <span class="h5 brand-title d-block mb-0">Zakaria Daoudi</span>
+        <small>
+          Theoretical Physicist | Data Analyst | Technical and Scientific Writing
+        </small>
+      </div>
+
+      <!-- Right Nav Items -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#blog" class="nav-link">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+</br>
+</br>
+</br>
+<center>
+    <span id="txt"><FONT size="10pt" color="blue">      Linear Regression Algorithm          </FONT></span>
+    </center>
+</br>
+</br>
+    <div style="text-align: center;">
+        <figure>
+            <img src="assets/imgs/SLR.png" style="width:100%">
+            <figcaption>Fig. 1: Example of Linear Regression applied for a given training dataset. 
+            </br>You can find more explanation in the <a href="ML_SLR.html#"><FONT color="blue">section 4</FONT></a> or you can check the Jupyter Notebook 
+                </br> that produced this figure in <a href="https://github.com/zackariadaoudi/Machine-Learning-Projects/'CO2 Cars Emissions'/Carbon_Cars_Emissions_Simple_Linear_Regression.ipynb" target="_blank" rel="noopener noreferrer"><FONT color="blue">my Github</FONT></a> 
+                or in my <a href="https://colab.research.google.com/drive/1Wo-N9qNZlV_JlL8u4vKhqtRBcSyHa4yP" target="_blank" rel="noopener noreferrer"><FONT color="blue">research google colab notebook</FONT></a>.
+            </figcaption>
+          </figure>
+        </div>
+    </br>
+    </br>
+
+            <h2 class="mb-1">
+                <p class="indent"><FONT size="6pt" color="black"><u>Table of Matter</u></FONT>
+            </h2>
+            <p class="indent"><a href="ML_SLR.html#Description"><FONT size="4pt" color="blue">1. Introduction</FONT> </a></p> 
+            <p class="indent"><a href="ML_SLR.html#Maths"><FONT size="4pt" color="blue">2. Mathematical Foundations</FONT></a></p>
+            <p class="indent"><a href="ML_SLR.html#Maths-1"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 Solution and Cost Function</FONT></a></p>
+            <p class="indent"><a href="ML_SLR.html#Maths-2"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 Gradient Descent Algorithm</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python"><FONT size="4pt" color="blue">3. Python</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python-1"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 Why Python?</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python-2"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2 Data Exploration</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python-3"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3 Data Visualization</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python-4"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.4 Model Training</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#python-5"><FONT size="3pt" color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.5 Model Predictions</FONT></a></p> 
+            <p class="indent"><a href="ML_SLR.html#"><FONT size="4pt" color="blue">4. Real-World Application</FONT></a></p> 
+</center>
+
+</section> 
+    <section class="section" id="Description">
+        <div class="container">
+            <h3 class="mb-3"><span class="text-danger"></span>1. Introduction</h3>
+            Linear Regression is a foundational statistical technique used to explore the relationship between two continuous variables: a predictor (or independent) variable and a response (or dependent) variable. At its core, SLR aims to establish a linear connection between these two variables through a straight line, which best captures the underlying pattern of the data points.
+
+        </br>The fundamental equation for a Linear Regression model is:
+        <script type="text/javascript"
+                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+        <div>
+            <CENTER>$$ f_{w,b}(x)=w x + b + \epsilon $$</CENTER>
+        </div>
+
+Here, \(f_{w,b}\) signifies the response variable we are attempting to predict or explain; 
+\(X\) is the predictor variable we are using to forecast \(f_{w,b}\); \(b\) is the y-intercept 
+(the value of \(f_{w,b}\) when \(x\) is zero); \(w\) represents the slope of the regression line, 
+indicating the change in \(f_{w,b}\) for a unit change in \(x\); and (\epsilon\) denotes the error term, 
+capturing the variation in \(f_{w,b}\) that cannot be explained by the linear relationship with \(X\).
+
+</br>Linear Regression functions under two primary assumptions: that there is a linear 
+relationship between the input and output variables, and that the residuals 
+(the differences between observed and predicted values) follow a normal distribution.
+
+</br>This algorithm is a powerful tool not only for predictive analysis but also for providing insights into 
+the strength and nature of the association between the variables. 
+For instance, if after analyzing data on advertising spend and sales performance, 
+a company discovers a high positive slope, it can infer that higher advert spends usually 
+correlate with increased sales. In the world of data science and analytics, 
+SLR serves as an essential building block for understanding more complex modeling techniques 
+and provides a straightforward approach for making informed decisions based on data.
+        </div>
+    </section>
+    <section class="section" id="Maths">
+        <div class="container">
+            <h3 class="mb-3"><span class="text-danger"></span>2. Mathematical Foundation</h3>
+        Let's assume we have a collection of labeled points 
+        \({(x_i,y_i)}^{N}_{i=1}\), where N is the size of the
+        collextion, \(x_i\) is the D-dimensional feature vector of example 
+     \(i=1,...,N\), \(y_i\) is a real-valed targed and every 
+     feature \(x^{j}_i=1,...,D\), is also a real number. 
+        </br> Let's call the function \(f_{w,b}\) the <b>model</b>. The precedent notation of the function \(f\)
+        means that our model is parametrized by two values: \(w\) and \(b\), also called <b>weights</b> it can be defined as a linear combination as follow 
+        <div>
+            <CENTER>$$ f_{w,b}(x)=w x + b $$</CENTER>
+        </div>
+        where \(w\) is a D-dimensional vector of parameters and b is 
+        a real number. An even more simplified and compact notation can be used if we set \(x_0=1\), \(\theta_0=b\), and 
+        \(\theta_1=w\)
+        <div>
+            <CENTER>$$ f_{\theta}(x)=\sum_{i=0}^{D} \theta_i x_i = \theta^T x, $$</CENTER>
+        </div>
+        One can ask:"How is this relevant?", this is precisely the model used 
+        to predict the unkown \(y\) for a given x. Since there is a huge number of different pairs 
+         (<b>\(w\)</b>, \(b\)), we have to find the optimale values (<b>\(w^{*}\)</b>, \(b^{*}\)), where the optimal values 
+        of the parameters define the model that makes the most accurate predictions. 
+    </br>
+</br>
+        <section class="subsection" id="Maths-1">
+                <h5 class="mb-3"><span class="text-danger"></span>2.1 Solution and Cost Function</h5>
+        In order to find the optimal values for \(w^{*}\) and \(b^{*}\), we tries to minimize the
+        following expression 
+        <div>
+            <CENTER>$$ \frac{1}{N}\sum_{i=1,...,N}(f_{w,b}(x_i)-y_i)^2 $$</CENTER>
+        </div>
+        The term \((f_{w,b}(x_i)-y_i)^2\) is called the <b>loss function</b> or <b>cost function</b>.
+        That function is a choice of measurement of the model accuracy called <b>squared error loss</b>. The cost function is something 
+        general to all machine learning algorithms, and the principle is the same
+        <CENTER><i><b><FONT size="4pt" color="red">The less the cost function is, the best the model is.</FONT></b></i></CENTER>
+        In linear regression, the cost function is given by an average, the <b>average loss</b>, it's basically the average of all penalties
+        obtained by apllying the model to the training data. One of the advantages of the linear models and its simplicity 
+        beside the fact that <b>it works</b>, is that it rarely overfit. By <b>overfitting</b>, we mean that the model predicts very well labels 
+        of the examples used during training but frequently makes errors when applied to the test set. To answer a not asked question,
+        The absolute value is not convinient for gauging the quality of the model, because it doesn't have a continuous derivative, hence the function produced 
+        is not smooth, therefore, employing linear algebra to find closed form solutions to optimization problems is not easy and can be extremely exchausting. For this reason we use 
+        the squaring error before summing, thanks to a wonderful French mathematician from the 18th century called Adrien-Marie Legendre. 
+        Closed form solutions to finding an optimum of a function are simple algebraic expressions and are often preferabke to using complex numerical optimization
+        methods such as <b>gradient descent</b>.
+        </section> 
+    </br>
+        <section class="subsection" id="Maths-2">
+            <h5 class="mb-3"><span class="text-danger"></span>2.2 Gradient Descent Algorithm</h5>
+            We start with an initial \(\theta\) value, and we constantly performs the operations
+            <div>
+                <CENTER>$$ \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} f_{\theta} $$</CENTER>
+            </div>
+            where \(\alpha\) is the <b>learning rate</b>. If we suppose that we have only one training example (x,y), the derivative \(\frac{\partial}{\partial \theta_i} J(\theta)\) can be written as 
+            <div>
+                <CENTER>$$ \frac{\partial}{\partial \theta_i} J(\theta) = \frac{\partial}{\partial \theta_i} \frac{1}{2} (h_{\theta}(x)-y)^2 = (h_{\theta}(x) - y) x_j $$</CENTER>
+            </div>
+            Hence the operation can be rewritten for a signle training example as 
+            <div>
+                <center>$$ \theta_j := \theta_j + \alpha (y^{(i)} - h_{\theta}(x^{(i)})) x_j^{(i)}$$</center>
+            </div>
+            This is the <b>Least Mean Squares</b> rule, which is also known as the <b>Widrow-Hoff</b> learning rule. For training sets with more than one example, we can repeat the LMS rule until convergence,
+            <b>i.e.</b> repeat it for every \(j\), or we group the coordinates into a vector called \(\theta\),
+            <div>
+                <center>$$ \theta := \theta + \alpha \sum_{i=1}^{n} (y^{(i)} - h_{\theta}(x^{(i)})) x_j^{(i)}$$</center>
+            </div>
+        </section> 
+     </div>
+    </section>   
+    <section class="section" id="python">
+        <div class="container">
+            <h3 class="mb-3"><span class="text-danger"></span>3. Python</h3>
+            Python is a high-level, dynamically typed programming language celebrated for its clear syntax and readability. With automatic memory management and a comprehensive standard library, 
+            Python supports multiple programming paradigms and fosters rapid development. Its "batteries included" philosophy ensures a rich set of functionalities available by default, 
+            while its package manager, pip, facilitates third-party module integration, extending Python's versatility. Though not as fast as compiled languages, 
+            Python's platform independence and ease of extension with C/C++ make it suitable for a wide range of applications, from web development to machine learning. Community-driven, 
+            Python is constantly evolving, with Python 3 marking the latest iteration, emphasizing improved language clarity and future-proofing.
+            </br>
+        </br>
+            <section class="subsection" id="python-1">
+                <h5 class="mb-3"><span class="text-danger"></span>3.1 Why Python?</h5>
+                Python holds a position of prominence in machine learning (ML) largely because of its simplicity and powerful features. It offers several benefits and is chosen over other programming languages for various reasons.
+                <ul>
+                    <li>Comprehensive Libraries: Python’s extensive selection of libraries like Scikit-learn for general ML, TensorFlow and Keras for neural networks, and Pandas for data analysis, 
+                        streamlines the process of implementing ML algorithms. These libraries come equipped with pre-coded functions and utilities that save time and reduce complexity.</li>
+                    <li>Community and Support: Boasting one of the largest programming communities, Python provides ample support through forums, tutorials, and documentation, making it easier for 
+                        ML practitioners to get assistance and stay updated with the latest advancements.</li>
+                    <li>Readability and Simplicity: Python’s syntax is clear and resembles human language, which makes it accessible for beginners. 
+                        ML involves complex algorithms and data processes; Python’s simplicity allows developers to write reliable systems without getting bogged down by the intricacies of the 
+                        language itself.</li>
+                    <li>Flexibility: Python’s flexibility is evident in the support it offers for both scripting and OOP approaches. This means it can adapt to different problem-solving situations, and 
+                        can be used alongside other programming languages as needed.</li>
+                    <li>Data Handling Capabilities: Handling massive datasets is a routine in ML, and Python is equipped with libraries like NumPy and pandas that excel in data extraction, 
+                        manipulation, and visualization, providing a seamless workflow for data scientists.</li>
+                    <li>Platform Independence: Python is cross-platform; it can run on Windows, macOS, Linux, and has been ported to Java and .NET virtual machines. This ensures that ML solutions are 
+                        portable and can be used across different platforms without modification.</li>
+                    <li>Integration: Python can integrate with other languages that are optimized for specific tasks. So, computationally intensive tasks can be offloaded to languages like C or 
+                        Fortran, and the interface with Python for the rest of the ML workflow.</li>
+                    <li>Commercial Applications: With Python, machine learning models can be directly integrated into production environments. It’s easy to deploy ML models created in Python to web 
+                        servers, or integrate them with enterprise-level applications.</li>
+                    <li>Rapid Prototyping: The ease and speed with which Python allows for prototyping of ML models enable developers and businesses to go from concept to a working model quickly, 
+                        which is crucial for a swift business decision-making process.</li>  
+                  </ul>
+             
+             In the grand scheme of technology, machine learning is a key driver for innovation, and Python is the vehicle through which many modern ML tasks are delivered. 
+             Its scalability, robustness, and ease of use make it a standout choice for organizations and individuals looking to leverage data for intelligent insights and actions.
+            </section> 
+        </br>
+        </br>
+        <section class="subsection" id="python-2">
+            <h5 class="mb-3"><span class="text-danger"></span>3.2 Data Exploration</h5>
+        </section> 
+        </br>
+        </br>
+        <section class="subsection" id="python-3">
+            <h5 class="mb-3"><span class="text-danger"></span>3.3 Data Visualization</h5>
+        </section> 
+        </br>
+        </br>
+        <section class="subsection" id="python-4">
+            <h5 class="mb-3"><span class="text-danger"></span>3.4 Model Training</h5>
+        </section>
+        </br>
+        </br>
+        <section class="subsection" id="python-5">
+             <h5 class="mb-3"><span class="text-danger"></span>3.5 Model Predictions</h5>
+        </section> 
+        </div>
+    </section> 
+
+    
+    <section class="section bg-custom-gray" id="portfolio1">
+        <div class="container">
+            <h1 class="mb-30"><span class="text-danger">Other Machine Learning Algorithms</span></h1>
+            <div class="portfolio">
+
+    <div class="section contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input  class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in touch</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-mobile icon-md"></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (213) 561-693-386</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-envelope icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">zackaria.daoudi@google.com</span></h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4">
+                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                                            <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                            -->             <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                            -->             <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
+                                            <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122" ><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul> 
+                    </div>
+                </div>
+            </div>
+    </div>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google mpas -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- JohnDoe js -->
+    <script src="assets/js/johndoe.js"></script>
+</body>
+</html>

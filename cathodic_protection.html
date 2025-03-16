@@ -1,239 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
-      </head>
-<head>
-	<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with JohnDoe landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Zakaria Daoudi | Cathodic Protection Simulation Tool </title>
-    <!-- font icons -->
+    <meta name="description" content="Zakaria Daoudi - Professional Theoretical Physicist">
+    <meta name="author" content="Zakaria Daoudi">
+    <title>Zakaria Daoudi | Cathodic Protection Simulation Tool</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
+    <!-- Font Icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
-	<link rel="stylesheet" href="assets/css/johndoe.css">
-</head>
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-    <div class="container">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#resume" class="nav-link">Resume</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav brand">
-                <li class="text-center">
-                    <h5 class="brand-title"><FONT color="blue"> Zakaria Daoudi </FONT></h5>
-                    <div class="brand-subtitle"><FONT color="blue"> Theoretical Physicist | Data Analyst | Technical and Scientific Writing </FONT></div>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item last-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- MathJax for equations -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <style>
+      /* Base styling */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        background-color: #f8f9fa; /* Very light gray */
+        color: #2c3e50;          /* Dark blue-gray text */
+        padding-bottom: 40px;
+      }
+      h1, h2, h3 {
+        font-family: Georgia, serif;
+        margin-top: 0;
+      }
+      a {
+        color: #2980b9;  /* Crisp blue for links */
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Navigation: Flex layout with centered brand */
+      nav.navbar {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      .container.d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav.brand {
+        margin: 0 auto;
+      }
+      .brand-title {
+        margin-bottom: 0;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .brand-subtitle {
+        font-size: 0.85em;
+        color: #7f8c8d;
+      }
+      /* Fixed Sidebar TOC */
+      .sidebar-toc {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 240px;
+        background: #ffffff;
+        border-right: 1px solid #bdc3c7;
+        padding: 20px;
+        height: calc(100% - 100px);
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+      }
+      .sidebar-toc h2 {
+        font-size: 1.5em;
+        color: #2980b9;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .sidebar-toc ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar-toc li {
+        margin: 10px 0;
+      }
+      .sidebar-toc li a {
+        font-size: 1em;
+        color: #2980b9;
+      }
+      /* Main Content Area */
+      .main-content {
+        margin-left: 260px;
+        padding: 20px 40px;
+        background: #ffffff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      .section h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #bdc3c7;
+        padding-bottom: 10px;
+      }
+      .section h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+      .section p {
+        margin: 1em 0;
+        text-align: justify;
+      }
+      /* Equations: Wrap each equation with <CENTER>$$ ... \quad (n)$$</CENTER> */
+      @media (max-width: 768px) {
+        .sidebar-toc {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #bdc3c7;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Navigation -->
+<style>
+  .navbar-custom {
+    background: linear-gradient(45deg, #0B3D91, #1E88E5);
+    font-family: 'Open Sans', sans-serif; /* Ensure this font is loaded or change to your preferred font */
+  }
+  /* Increase spacing between nav items */
+  .navbar-custom .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  /* Adjust nav link font size, weight, and color */
+  .navbar-custom .nav-link {
+    color: #ffffff; /* Slightly off-white for improved readability */
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .nav-link:focus {
+    color: #ffffff; /* Bright white on hover */
+  }
+  .navbar-custom .navbar-toggler {
+    border-color: rgba(240, 240, 240, 240);
+  }
+  .navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240, 240, 240, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  .navbar-custom .brand-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .navbar-custom small {
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+</style>
+
+<!-- Navbar Markup -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom"
+     data-spy="affix" data-offset-top="510">
+  <div class="container">
+
+    <!-- Mobile Toggler Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarContent" aria-controls="navbarContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Nav Items -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Left Nav Items -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#resume" class="nav-link">Resume</a>
+        </li>
+      </ul>
+
+      <!-- Centered Brand (Always Visible) -->
+      <div class="mx-auto text-center">
+        <span class="h5 brand-title d-block mb-0">Zakaria Daoudi</span>
+        <small>
+          Theoretical Physicist | Data Analyst | Technical and Scientific Writing
+        </small>
+      </div>
+
+      <!-- Right Nav Items -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#blog" class="nav-link">Blog</a>
+        </li>
+      </ul>
     </div>
+
+  </div>
 </nav>
-    <center>
-        <span id="txt"><FONT size="10pt" color="green">       Cathodic Protection Simulation Tool           </FONT></span>
-        </center>
-    <br>
-    <br>
-    <section class="section" id="Introduction">
-        <div class="container">
-            <h3 class="mb-5"><span class="text-danger"></span>Introduction</h3>
-            <p> <FONT size="3.5pt" color="black">
-                The task was to build the mathematics needed to simulate a pipeline with and without cathodic protection. <br>
-                Cathodic protection is one of the most effective methods for preventing corrosion on a metal surface. 
-                Cathodic protection is commonly used to protect numerous structures against corrosion, such as ships, 
-                offshore floaters, subsea equipment, harbours, pipelines, tanks; basically all submerged or buried metal structures. 
-                More information can be found <a href="https://cathwell.com/priniples-of-cpppppp/#:~
-                :text=Cathodic%20protection%20is%20one%20of,submerged%20or%20buried%20metal%20structures." target="_blank">here</a>.
-                <br>
-                The Simulation tool focus on the Impressed Current Cathodic Protection (ICCP) described in Figure 1. 
-                We start by dividing the soil into a lattice of N<span>&#215;</span>M cells, each of 10<span>&#215;</span>10 meters square, 
-                where the pipeline in each cell have a length L. 
-                <div style="text-align: center;">
-
-                    <figure>
-                        <img src="assets/imgs/cath1.png" style="width:100%">
-                        <figcaption><CENTER>Fig.1 : Impressed Current Cathodic Protection. </CENTER></figcaption>
-                    </figure>
-                    <br>
-                    <br>
-                </div>
-                The next step is to discretize the current density and the electric field on 
-                the new lattice created. The challenge in this task is to adapt the mathematical model 
-                of the ICCP to this lattice.
-                The Simulation Tool is hosted on <a href="https://github.com/atmosphericiq/iecm_simulator.git" target="_blank">Github</a> and the 
-                front-end app can be accessed via this <a href="http://sim.iecm.org/" target="_blank">link</a>.                
-            </FONT>
-            </p>
-            
-        </div>
-    </section>   
-    <section class="section" id="Basic">
-        <div class="container">
-            <h3 class="mb-5"><span class="text-danger"></span>Basic Mathematics</h3>
-            <p> <FONT size="3.5pt" color="#282828">
-                We start by discretize the current density on the pipeline created by one AC-DC rectifier : <br>  
-                <script type="text/javascript"
-                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-                </script>
-                <div>
-                    <CENTER>$$J = {I \over A}$$</CENTER>
-                </div>    
-                where J is the current density, I the current density from the rectifier and A the surface of the pipeline
-                in one cell. So the first question that came to our mind, is that if the rectifier is in position 1, i.e cell 1,
-                then what is the current density in cell 2 ? Cell 3 ? And so on. A basic formula is calculated for a current density 
-                in a cell N,
-                <div>
-                    <CENTER>$$J = {I \over A_{n}}$$</CENTER>
-                </div>
-                here \(A_{n}\) is the surface of of the pipeline at a cell n from the rectifier, which is written 
-                \(A_{n} = n \times A_{1}\), and \(A_{1} = 27.18 m^2\), the surface of the pipeline contained in
-                one cell. More details about the calculations are provided in <a href="assets/files/basic_maths_ICCP.pdf" target="_blank">
-                this</a> pdf file.
-                <br>
-                <br>
-                A straightforward generalization leads to an equation for n rectifiers 
-                <div>
-                    <CENTER>$$J_{M} =\sum^{M}_{1} { I_{M} \over A_{1} \times (|p_{M}-n|+1)}$$</CENTER>
-                </div>
-                where \(I_{M}\) and \(p_{M}\) are the current produced by the rectifier M and its position respectively, n is the 
-                position where we are computing the current density on the pipeline.
-                <br> 
-                An optional step but could be used if there is an AC current which is to discretize the Electric Field. The electric 
-                field in two dimensions at a point P is given by 
-                <div>
-                    <CENTER>$$E_{T_{x}}=E_{S_{x}}+E_{A_{x}}+E_{B_{x}}$$</CENTER>
-                    <CENTER>$$E_{T_{y}}=E_{S_{y}}+E_{A_{y}}+E_{B_{y}}$$</CENTER>
-                </div>
-                where S and A are the current sources and B the current sink, see fig. 2 for more details. The details of the 
-                calculations are given in <a href="assets/files/E-field.pdf" target="_blank">
-                this</a> pdf file.
-                <br>
-                <div style="text-align: center;">
-                  <figure>
-                    <img src="assets/imgs/e-field.png" style="width:100%">
-                    <figcaption><CENTER>Fig.1 : The Electric Field created by S, A and B at point P. </CENTER></figcaption>
-                  </figure>
-                </div>  
-                The Electric Fields created by S, A and B are given by :
-                <br>
-                <br>
-                <div>
-                    <p><FONT size="3.5pt" color="#282828">the current source S :</FONT></p>
-                    <CENTER>$$E_{S_{x}}=E_{S}\cos\alpha$$</CENTER>
-                    <CENTER>$$E_{S_{y}}=E_{S}\sin\alpha$$</CENTER>
-                </div>
-                <div>
-                    <p><FONT size="3.5pt" color="#282828">the current source A :</FONT></p>
-                    <CENTER>$$E_{A_{x}}=E_{A}\sin\gamma$$</CENTER>
-                    <CENTER>$$E_{A_{y}}=E_{A}\cos\gamma$$</CENTER>
-                </div>
-                <div>
-                    <p><FONT size="3.5pt" color="#282828">the current sink B :</FONT></p>
-                    <CENTER>$$E_{B_{x}}=E_{B}\cos\beta$$</CENTER>
-                    <CENTER>$$E_{B_{y}}=E_{B}\sin\beta$$</CENTER>
-                </div>    
-            </FONT>
-            </p>
-            
-        </div>
-    </section>  
     
-    <section class="section bg-custom-gray" id="portfolio1">
-        <div class="container">
-            <h1 class="mb-30"><span class="text-danger">Other Engineering Projects</span></h1>
-            <div class="portfolio">
-
-    <div class="section contact" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form action="">
-                            <div class="form-group">
-                                <input  class="form-control" type="text" placeholder="Name *" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info-card">
-                        <h4 class="contact-title">Get in touch</h4>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-mobile icon-md"></i>
-                            </div>
-                            <div class="col-10 ">
-                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (213) 561-693-386</span></h6>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-1 pt-1 mr-1">
-                                <i class="ti-envelope icon-md"></i>
-                            </div>
-                            <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">zackaria_daoudi@google.com</span></h6>
-                            </div>
-                        </div>
-                        <ul class="social-icons pt-4">
-                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                                            <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                            -->             <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                            -->             <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
-                                            <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122" ><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul> 
-                    </div>
-                </div>
-            </div>
+    <!-- Header with images and centered title -->
+    <center>
+      <img src="assets/imgs/cath1.png" id="img1" style="width:20%; margin-right:10px;">
+      <span id="header-title"><font size="10pt" color="#2ecc71"><u>Cathodic Protection Simulation Tool</u></font></span>
+      <img src="assets/imgs/cath2.jpg" id="img2" style="width:20%; margin-left:10px;">
+    </center>
+    <br><br>
+    
+    <!-- Fixed Sidebar Table of Contents -->
+    <div class="sidebar-toc">
+      <h2>Table of Matter</h2>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#iccp">2. ICCP Mathematics</a></li>
+        <li><a href="#algorithm">3. ICCP Algorithm</a></li>
+        <li><a href="#interactive">4. Interactive Math Sheet</a></li>
+        <li><a href="#conclusion">5. Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
     </div>
-
-	<!-- core  -->
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- 1. Introduction -->
+      <section class="section" id="introduction">
+        <h2><u>Introduction</u></h2>
+        <p>
+          The objective of this simulation tool is to build the mathematics required to model a pipeline with and without cathodic protection. Cathodic protection is a proven method for preventing corrosion on metal structures and is widely used to protect pipelines, ships, offshore installations, and more.
+        </p>
+        <p>
+          In this tool, we focus on the Impressed Current Cathodic Protection (ICCP) system. The soil is discretized into a lattice of N×M cells (each 10×10 m²), and the pipeline within each cell has a given length L. This approach allows us to simulate current density and the associated electric fields along the pipeline.
+        </p>
+        <center>
+          <figure>
+            <img src="assets/imgs/cath1.png" style="width:100%;">
+            <figcaption><center>Fig.1 : Schematic representation of an Impressed Current Cathodic Protection system.</center></figcaption>
+          </figure>
+        </center>
+      </section>
+      
+      <!-- 2. ICCP Mathematics -->
+      <section class="section" id="iccp">
+        <h2><u>ICCP Mathematics</u></h2>
+        <p>
+          The mathematical framework for the ICCP simulation tool comprises several key areas:
+        </p>
+        <ol>
+          <li><b>Anode Mathematics:</b> Calculation of anode resistance (horizontal and vertical), positioning, current output, and number of anodes required.</li>
+          <li><b>Basic Circuit Mathematics:</b> Total circuit resistance, including structure-to-electrolyte and wire resistance.</li>
+          <li><b>Rectifier Part:</b> Determination of rectifier voltage and current.</li>
+          <li><b>Holiday Mathematics:</b> Estimation of corrosion rate and corrosion current density relative to holiday size.</li>
+          <li><b>Pipe-to-Soil Potential:</b> Estimation of the potential difference between the pipeline and the soil.</li>
+          <li><b>Coatings:</b> Calculation of coating conductance, attenuation factor, and required protective current.</li>
+        </ol>
+        
+        <!-- Example: Anode Mathematics -->
+        <h3>Anode Mathematics</h3>
+        <p>
+          For horizontal anodes, the resistance is calculated as:
+        </p>
+        <CENTER>$$R_{h} = 0.00521\,\rho\,L \left[2.303\left(\log_{10}\frac{4L}{D} + \log_{10}\frac{L}{h}\right) + \frac{2h}{L} - 2\right] \quad (1)$$</CENTER>
+        <p>
+          Here, <i>L</i> is the anode-pipeline distance, <i>D</i> is the anode diameter, and <i>h</i> is determined by:
+        </p>
+        <CENTER>$$h = d_{p} + L\tan\alpha \quad (2)$$</CENTER>
+        <p>
+          where \(d_{p}\) is the pipeline depth (assumed 1.5 m) and \(\alpha\) is the angle of inclination.
+        </p>
+        
+        <!-- Example: Basic Circuit Mathematics -->
+        <h3>Basic Circuit Mathematics</h3>
+        <p>
+          The total circuit resistance is:
+        </p>
+        <CENTER>$$R_{T} = R_{a} + R_{W} + R_{C} \quad (3)$$</CENTER>
+        <p>
+          where \(R_{a}\) is the anode resistance, \(R_{W}\) is the wire resistance, and \(R_{C}\) is the structure-to-electrolyte resistance.
+        </p>
+        
+        <!-- Example: Rectifier Part -->
+        <h3>Rectifier Part</h3>
+        <p>
+          The rectifier voltage is computed as:
+        </p>
+        <CENTER>$$V_{rec} = I_{RT} \times 150\% \quad (4)$$</CENTER>
+        <p>
+          with \(I_{RT}\) being the total required current.
+        </p>
+        
+        <!-- Example: Pipe-to-Soil Potential -->
+        <h3>Pipe-to-Soil Potential</h3>
+        <p>
+          The potential difference between the pipe and the soil can be approximated as:
+        </p>
+        <CENTER>$$\Delta V = -\frac{Q}{A\epsilon}\left[d-t\left(1-\frac{1}{1+K_e}\right)\right] \quad (5)$$</CENTER>
+        <p>
+          where \(Q\) is the total charge, \(A\) is the cross-sectional area, \(\epsilon\) is the permittivity, \(d\) is the distance from the pipe to the measurement point, \(t\) is the pipe diameter, and \(K_e\) is the electric susceptibility.
+        </p>
+        
+        <!-- Example: Coatings and Protective Current -->
+        <h3>Coatings and Protective Current</h3>
+        <p>
+          The pipe resistance is given by:
+        </p>
+        <CENTER>$$R_{p} = \frac{\rho}{\pi \times L \times (OD - WT)} \quad (6)$$</CENTER>
+        <p>
+          The coating conductance is:
+        </p>
+        <CENTER>$$G = \frac{\pi \times OD}{\omega} \quad (7)$$</CENTER>
+        <p>
+          The attenuation constant is:
+        </p>
+        <CENTER>$$\alpha = \sqrt{R_{p} \times G} \quad (8)$$</CENTER>
+        <p>
+          And the required protective current can be approximated by:
+        </p>
+        <CENTER>$$I_{0} \approx \frac{\Delta E}{R_{CR} \tan (\alpha \times L)} \quad (9)$$</CENTER>
+        <p>
+          where \(R_{CR} = \sqrt{\frac{R_{p}}{G}}\) is the pipe characteristic resistance.
+        </p>
+      </section>
+      
+      <!-- 3. ICCP Algorithm -->
+      <section class="section" id="algorithm">
+        <h2><u>ICCP Algorithm</u></h2>
+        <p>
+          The following steps outline the algorithm used in the ICCP simulation tool:
+        </p>
+        <ol>
+          <li><b>Input:</b> Measure the pipe-to-soil potential \(E\) and compute the voltage drop \(\Delta E = -0.85 - E\).</li>
+          <li>Determine the pipe resistance \(R\) (e.g., \(R = \frac{215.8L}{10^6 W}\), where \(W\) is the pipe weight per meter).</li>
+          <li>Calculate the current flow using Ohm’s law: \(I = \frac{\Delta E}{R}\).</li>
+          <li>Determine the pipe surface area \(A_P = \pi d l\) (with \(l\) as the pipe length and \(d\) the outside diameter).</li>
+          <li>Compute the horizontal anode resistance \(R_h\) using the equation above.</li>
+          <li>Estimate the anode current output and the number of anodes required.</li>
+          <li>Calculate the wire resistance \(R_W\) based on the cable’s specified resistance and the wire length.</li>
+          <li>Determine the pipe-to-soil resistance \(R_{PS} = \frac{\Delta E}{I}\).</li>
+          <li>Compute the total circuit resistance \(R_T = R_a + R_W + R_{PS}\).</li>
+          <li>Finally, calculate the required rectifier output \(V_{rec} = I_{RT} \times 150\%\), where \(I_{RT}\) is the total required current.</li>
+        </ol>
+        <!-- Embedded Interactive Math Sheet -->
+        <h3>Interactive Mathematics Sheet</h3>
+        <p>
+          Try the interactive IECM Basic Math sheet directly below:
+        </p>
+        <div style="width: 100%; height: 600px;">
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfAp8CzB4E2DqUZNT9KG5WRvGDiKlIPsw6tR-2-gLS_A-Jm2jI1o0ic1XRd0XjzQ/pubhtml?gid=160967622&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+      </section>
+      
+      <!-- 4. Conclusion -->
+      <section class="section" id="conclusion">
+        <h2><u>Conclusion</u></h2>
+        <p>
+          Cathodic protection—especially via the Impressed Current method—is essential for preventing corrosion on pipelines and other metal structures. By applying detailed mathematical models and algorithms, engineers can design effective protection systems. This simulation tool integrates complex parameters—from anode and circuit resistances to protective current requirements—into an accessible framework that aids in system design and optimization.
+        </p>
+      </section>
+      
+      <!-- References -->
+      <section class="section" id="references">
+        <h2><u>References</u></h2>
+        <ol>
+          <li>ICCP Maths (2023). Maths for the ICCP Simulation Tool.</li>
+          <li>The Mathematics of Impressed Current Cathodic Protection (2023).</li>
+          <li>Basic Maths for ICCP. (n.d.).</li>
+          <li>Algorithm for ICCP. (2023).</li>
+        </ol>
+      </section>
+    </div>
+    
+    <!-- Contact Section -->
+    <section class="section bg-custom-gray" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="contact-form-card">
+              <h4 class="contact-title">Send a message</h4>
+              <form action="mailto:zakaria.daoudi@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <input type="text" placeholder="Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Message *" rows="7" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-info-card">
+              <h4 class="contact-title">Get in touch</h4>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-mobile icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Phone :<br> <span class="text-muted">+ (213) 561-693-386</span></h6>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-1 pt-1 mr-1">
+                  <i class="ti-envelope icon-md"></i>
+                </div>
+                <div class="col-10">
+                  <h6 class="d-inline">Email :<br> <span class="text-muted">zakaria.daoudi@google.com</span></h6>
+                </div>
+              </div>
+              <ul class="social-icons pt-4">
+                <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Core JS -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Isotope  -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
-    
-    <!-- Google mpas -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
-
-    <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
-
-</body>
+  </body>
 </html>
+

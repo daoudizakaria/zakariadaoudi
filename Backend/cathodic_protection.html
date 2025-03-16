@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/x-icon" href="assets/imgs/android-chrome.png" />
+      </head>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Zakaria Daoudi | Cathodic Protection Simulation Tool </title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+</head>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link">Resume</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav brand">
+                <li class="text-center">
+                    <h5 class="brand-title"><FONT color="blue"> Zakaria Daoudi </FONT></h5>
+                    <div class="brand-subtitle"><FONT color="blue"> Theoretical Physicist | Data Analyst | Technical and Scientific Writing </FONT></div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item last-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <center>
+        <span id="txt"><FONT size="10pt" color="green">       Cathodic Protection Simulation Tool           </FONT></span>
+        </center>
+    <br>
+    <br>
+    <section class="section" id="Introduction">
+        <div class="container">
+            <h3 class="mb-5"><span class="text-danger"></span>Introduction</h3>
+            <p> <FONT size="3.5pt" color="black">
+                The task was to build the mathematics needed to simulate a pipeline with and without cathodic protection. <br>
+                Cathodic protection is one of the most effective methods for preventing corrosion on a metal surface. 
+                Cathodic protection is commonly used to protect numerous structures against corrosion, such as ships, 
+                offshore floaters, subsea equipment, harbours, pipelines, tanks; basically all submerged or buried metal structures. 
+                More information can be found <a href="https://cathwell.com/priniples-of-cpppppp/#:~
+                :text=Cathodic%20protection%20is%20one%20of,submerged%20or%20buried%20metal%20structures." target="_blank">here</a>.
+                <br>
+                The Simulation tool focus on the Impressed Current Cathodic Protection (ICCP) described in Figure 1. 
+                We start by dividing the soil into a lattice of N<span>&#215;</span>M cells, each of 10<span>&#215;</span>10 meters square, 
+                where the pipeline in each cell have a length L. 
+                <div style="text-align: center;">
+
+                    <figure>
+                        <img src="assets/imgs/cath1.png" style="width:100%">
+                        <figcaption><CENTER>Fig.1 : Impressed Current Cathodic Protection. </CENTER></figcaption>
+                    </figure>
+                    <br>
+                    <br>
+                </div>
+                The next step is to discretize the current density and the electric field on 
+                the new lattice created. The challenge in this task is to adapt the mathematical model 
+                of the ICCP to this lattice.
+                The Simulation Tool is hosted on <a href="https://github.com/atmosphericiq/iecm_simulator.git" target="_blank">Github</a> and the 
+                front-end app can be accessed via this <a href="http://sim.iecm.org/" target="_blank">link</a>.                
+            </FONT>
+            </p>
+            
+        </div>
+    </section>   
+    <section class="section" id="Basic">
+        <div class="container">
+            <h3 class="mb-5"><span class="text-danger"></span>Basic Mathematics</h3>
+            <p> <FONT size="3.5pt" color="#282828">
+                We start by discretize the current density on the pipeline created by one AC-DC rectifier : <br>  
+                <script type="text/javascript"
+                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+                </script>
+                <div>
+                    <CENTER>$$J = {I \over A}$$</CENTER>
+                </div>    
+                where J is the current density, I the current density from the rectifier and A the surface of the pipeline
+                in one cell. So the first question that came to our mind, is that if the rectifier is in position 1, i.e cell 1,
+                then what is the current density in cell 2 ? Cell 3 ? And so on. A basic formula is calculated for a current density 
+                in a cell N,
+                <div>
+                    <CENTER>$$J = {I \over A_{n}}$$</CENTER>
+                </div>
+                here \(A_{n}\) is the surface of of the pipeline at a cell n from the rectifier, which is written 
+                \(A_{n} = n \times A_{1}\), and \(A_{1} = 27.18 m^2\), the surface of the pipeline contained in
+                one cell. More details about the calculations are provided in <a href="assets/files/basic_maths_ICCP.pdf" target="_blank">
+                this</a> pdf file.
+                <br>
+                <br>
+                A straightforward generalization leads to an equation for n rectifiers 
+                <div>
+                    <CENTER>$$J_{M} =\sum^{M}_{1} { I_{M} \over A_{1} \times (|p_{M}-n|+1)}$$</CENTER>
+                </div>
+                where \(I_{M}\) and \(p_{M}\) are the current produced by the rectifier M and its position respectively, n is the 
+                position where we are computing the current density on the pipeline.
+                <br> 
+                An optional step but could be used if there is an AC current which is to discretize the Electric Field. The electric 
+                field in two dimensions at a point P is given by 
+                <div>
+                    <CENTER>$$E_{T_{x}}=E_{S_{x}}+E_{A_{x}}+E_{B_{x}}$$</CENTER>
+                    <CENTER>$$E_{T_{y}}=E_{S_{y}}+E_{A_{y}}+E_{B_{y}}$$</CENTER>
+                </div>
+                where S and A are the current sources and B the current sink, see fig. 2 for more details. The details of the 
+                calculations are given in <a href="assets/files/E-field.pdf" target="_blank">
+                this</a> pdf file.
+                <br>
+                <div style="text-align: center;">
+                  <figure>
+                    <img src="assets/imgs/e-field.png" style="width:100%">
+                    <figcaption><CENTER>Fig.1 : The Electric Field created by S, A and B at point P. </CENTER></figcaption>
+                  </figure>
+                </div>  
+                The Electric Fields created by S, A and B are given by :
+                <br>
+                <br>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current source S :</FONT></p>
+                    <CENTER>$$E_{S_{x}}=E_{S}\cos\alpha$$</CENTER>
+                    <CENTER>$$E_{S_{y}}=E_{S}\sin\alpha$$</CENTER>
+                </div>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current source A :</FONT></p>
+                    <CENTER>$$E_{A_{x}}=E_{A}\sin\gamma$$</CENTER>
+                    <CENTER>$$E_{A_{y}}=E_{A}\cos\gamma$$</CENTER>
+                </div>
+                <div>
+                    <p><FONT size="3.5pt" color="#282828">the current sink B :</FONT></p>
+                    <CENTER>$$E_{B_{x}}=E_{B}\cos\beta$$</CENTER>
+                    <CENTER>$$E_{B_{y}}=E_{B}\sin\beta$$</CENTER>
+                </div>    
+            </FONT>
+            </p>
+            
+        </div>
+    </section>  
+    
+    <section class="section bg-custom-gray" id="portfolio1">
+        <div class="container">
+            <h1 class="mb-30"><span class="text-danger">Other Engineering Projects</span></h1>
+            <div class="portfolio">
+
+    <div class="section contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input  class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in touch</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-mobile icon-md"></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (213) 561-693-386</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-envelope icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">zackaria_daoudi@google.com</span></h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4">
+                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                                            <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                            -->             <li class="social-item"><a class="social-link text" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                            <!--                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                            -->             <li class="social-item"><a class="social-link text" href="https://www.github.com/dzack95"><i class="ti-github" aria-hidden="true"></i></a></li>
+                                            <li class="social-item"><a class="social-link text" href="https://www.linkedin.com/in/zakaria-daoudi-022151122" ><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul> 
+                    </div>
+                </div>
+            </div>
+    </div>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google mpas -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- JohnDoe js -->
+    <script src="assets/js/johndoe.js"></script>
+
+</body>
+</html>
