@@ -38,7 +38,7 @@
       /* Header Section */
       header.header {
         background: linear-gradient(135deg, #34495e, #2c3e50);
-        color: #ffff;
+        color: #2980b9;
         text-align: center;
         padding: 0px 0px;
       }
@@ -51,7 +51,7 @@
       }
       /* Navigation */
       nav.navbar {
-        background: #ffffff;
+        background: #7CB9E8;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         position: sticky;
         top: 0;
@@ -68,7 +68,6 @@
       }
       /* Brand Navigation */
       .navbar-nav.brand {
-        display: flex;
         align-items: center;
       }
       .brand-img {
@@ -86,6 +85,16 @@
         font-size: 0.85em;
         color: #7f8c8d;
       }
+      /* Override the active nav link color & style */
+.navbar-nav .nav-item .nav-link.active {
+  color: #BA0021 !important;         /* Use any color you prefer */
+  border-bottom: 2px solid #BA0021;  /* Optional underline */
+}
+
+/* Also change the hover color if needed */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #c0392b !important;
+}
       /* Section Titles */
       .section-title {
         text-align: center;
@@ -111,7 +120,7 @@
         min-height: 300px;
       }
       .resume-card {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       .resume-card .card-header {
         text-align: center;
@@ -218,7 +227,7 @@
       }
       /* Equal container sizes for sections */
       .container {
-        max-width: 1200px;
+        max-width: 1500px;
       }
       /* Responsive */
       @media (max-width: 768px) {
@@ -227,10 +236,36 @@
       }
     </style>
   </head>
+      <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #E1EBEE;" data-spy="affix" data-offset-top="510">
+      <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+          </ul>
+          <ul class="navbar-nav brand">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Zakaria Daoudi</h5>
+                        <div class="brand-subtitle">Theoretical Physicist | Data Scientist | Technical and Scientific Writing</div>
+                    </li>
+                </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Header -->
     <header class="header">
-  <div class="container text-center">
 
     <!-- Social Icons -->
 
@@ -239,26 +274,24 @@
       <h1 class="header-title">Zakaria Daoudi</h1>
       <h6 class="header-mono">Theoretical Physics | Machine Learning | Educational and Scientific Writing</h6>
     </div>
-  </div>
 
   <style>
     /* Header Styling */
     .header {
-      background: url('assets/imgs/3.jpeg') no-repeat center center;
+      background: url('assets/imgs/3.jpeg');
       background-size: cover;
       position: relative;
       text-align: center;
-      padding: 120px 0px;
+      padding: 120px 100px;
     }
 
     .header::before {
-      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.2);
     }
 
     .header .container {
@@ -279,7 +312,7 @@
       border-radius: 50%;
       border: 4px solid #e74c3c;
       object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0);
       transition: transform 0.3s ease-in-out;
     }
 
@@ -312,18 +345,18 @@
 
     /* Header Content */
     .header-title {
-      font-size: 5em;
+      font-size: 12em;
       font-weight: bold;
-      color: #ffffff;
-      text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+      opacity: 1;
+      color: #ffffffff;
       margin-bottom: 12px;
     }
 
     .header-mono {
       font-size: 3em;
-      opacity: 0.9;
+      opacity: 1;
       font-weight: bold;
-      color: #eaeaea;
+      color: #ffffffff;
       letter-spacing: 0.8px;
     }
 
@@ -343,37 +376,7 @@
       }
     }
   </style>
-</header>
-
-
-    
-    <!-- Navigation -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-      <div class="container">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
-          </ul>
-          <ul class="navbar-nav brand">
-                    <li class="brand-txt">
-                        <h5 class="brand-title">Zakaria Daoudi</h5>
-                        <div class="brand-subtitle">Theoretical Physicist | Data Scientist | Technical and Scientific Writing</div>
-                    </li>
-                </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+</header
     
     <!-- Main Content -->
     <div class="container">
@@ -1488,7 +1491,7 @@
     /* Blog Card Content */
     .card-body {
       padding: 20px;
-      text-align: left;
+      text-align: center;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
